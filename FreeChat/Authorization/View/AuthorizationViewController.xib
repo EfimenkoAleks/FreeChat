@@ -10,8 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthorizationViewController" customModule="FreeChat" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="EWx-0d-52a" id="BzZ-1H-HsO"/>
                 <outlet property="enterButton" destination="gnX-1x-D7g" id="Qpc-XI-Ynu"/>
-                <outlet property="nameTextField" destination="EWx-0d-52a" id="xqt-Qo-rDW"/>
+                <outlet property="passwardTextField" destination="nGV-Cn-nMj" id="AVD-ZV-kM6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +24,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ss3-BC-4dE">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWx-0d-52a">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWx-0d-52a">
                             <rect key="frame" x="82" y="428" width="250" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="250" id="08s-Fl-F58"/>
@@ -56,10 +57,21 @@
                                 <action selector="actionButton:" destination="-1" eventType="touchUpInside" id="uf9-PH-am0"/>
                             </connections>
                         </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter passward" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGV-Cn-nMj">
+                            <rect key="frame" x="82" y="488" width="250" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="76j-Nk-seC"/>
+                                <constraint firstAttribute="width" constant="250" id="JgB-LJ-Wd6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                     </subviews>
                     <color key="backgroundColor" red="0.41746785771337852" green="0.69531271035858766" blue="0.96333307027816772" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstItem="gnX-1x-D7g" firstAttribute="centerX" secondItem="ss3-BC-4dE" secondAttribute="centerX" id="0rV-Gy-cq7"/>
+                        <constraint firstItem="nGV-Cn-nMj" firstAttribute="top" secondItem="EWx-0d-52a" secondAttribute="bottom" constant="20" id="4yM-xa-7w5"/>
+                        <constraint firstItem="nGV-Cn-nMj" firstAttribute="centerX" secondItem="ss3-BC-4dE" secondAttribute="centerX" id="Exk-59-lhX"/>
                         <constraint firstAttribute="bottom" secondItem="gnX-1x-D7g" secondAttribute="bottom" constant="100" id="Mny-wH-JXL"/>
                         <constraint firstItem="EWx-0d-52a" firstAttribute="centerY" secondItem="ss3-BC-4dE" secondAttribute="centerY" id="PS4-49-7bh"/>
                         <constraint firstItem="EWx-0d-52a" firstAttribute="centerX" secondItem="ss3-BC-4dE" secondAttribute="centerX" id="uYa-dk-d9a"/>

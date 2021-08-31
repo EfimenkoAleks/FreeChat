@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.isNavigationBarHidden = true
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
+        
+        FirebaseApp.configure()
         
         return true
     }

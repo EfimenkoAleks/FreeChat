@@ -10,10 +10,10 @@ import UIKit
 class AuthorizationViewController: UIViewController {
     
     var viewModel: AuthorizationViewModelProtocol!
-    
-    @IBOutlet weak var nameTextField: UITextField!
-    
-    @IBOutlet weak var enterButton: UIButton!
+   
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwardTextField: UITextField!
+    @IBOutlet private weak var enterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class AuthorizationViewController: UIViewController {
         self.view.backgroundColor = .white
     }
 
-    @IBAction func actionButton(_ sender: UIButton) {
+    @IBAction private func actionButton(_ sender: UIButton) {
     }
     
 }
