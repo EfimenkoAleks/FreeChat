@@ -18,7 +18,7 @@ class AuthorizationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        self.view.backgroundColor = .white
     }
 
     @IBAction func actionButton(_ sender: UIButton) {
