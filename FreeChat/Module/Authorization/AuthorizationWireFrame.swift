@@ -11,7 +11,8 @@ class AuthorizationWireFrame {
     
     static func create() -> UIViewController {
         let view = AuthorizationViewController()
-        let router = AuthorizationRouter(controller: view)
+        let router = AuthorizationRouter()
+        router.controller = view
         let viewModel = AuthorizationViewModel(router: router)
         view.viewModel = viewModel
         
