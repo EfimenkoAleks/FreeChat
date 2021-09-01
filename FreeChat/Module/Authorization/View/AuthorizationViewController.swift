@@ -17,11 +17,30 @@ class AuthorizationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewModel.delegate = self
 
         self.view.backgroundColor = .white
     }
 
     @IBAction private func actionButton(_ sender: UIButton) {
+        
     }
-    
+}
+
+extension AuthorizationViewController: AuthorizationDelegate {
+    func startButton(isCorrect: Bool) {
+        self.enterButton.alpha = isCorrect ? 1.0 : 0.5
+    }
+}
+
+extension AuthorizationViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField === self.emailTextField {
+            self.viewModel.didEnterEmail(textField.text)
+        }
+        
+        if textField === self.passwardTextField {
+            self.viewModel.didEnterPassword(textField.text)
+        }
+    }
 }
